@@ -57,6 +57,6 @@ public class Carry : MonoBehaviour
    void OnGUI()
    {
    Cursor.lockState = CursorLockMode.Locked;
-   Cursor.visible = true;
+   Cursor.visible = false;
   }
 }
