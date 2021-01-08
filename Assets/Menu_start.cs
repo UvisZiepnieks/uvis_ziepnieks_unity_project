@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
+
 public class Menu_start : Button
 {
          public void Update ()
@@ -33,13 +34,26 @@ public class Menu_start : Button
        
             
          }
+
      }
      public void startGame(){
-          SceneManager.LoadScene (sceneName:"Game_Scene");
+          StartCoroutine(waiter());
+
      }
     public void quit(){
-         UnityEditor.EditorApplication.isPlaying = false;
+        //  UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit ();
     }
+    IEnumerator waiter()
+{
+    //Wait for 4 seconds
+    yield return new WaitForSeconds(3);
+    SceneManager.LoadScene (sceneName:"Game_Scene");
+}
+  void OnGUI()
+   {
+   Cursor.lockState = CursorLockMode.None;
+   Cursor.visible = true;
+  }
        
 }

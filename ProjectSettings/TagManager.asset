@@ -16,6 +16,7 @@ TagManager:
   - vars
   - ImageDown
   - ImageDown1
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
