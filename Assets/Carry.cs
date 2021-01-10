@@ -29,10 +29,13 @@ public class Carry : MonoBehaviour
        skabeklis.SetActive(false);
        udenradis.SetActive(false);
        vars.SetActive(false);
+       
        GetComponent<MeshCollider>().enabled = false;
        GetComponent<Rigidbody>().useGravity = false;
+       
        this.transform.position = hold.position;
        this.transform.parent = GameObject.Find("HoldPosition").transform;
+
 
 
    }
@@ -48,7 +51,8 @@ public class Carry : MonoBehaviour
        skabeklis.SetActive(true);
        udenradis.SetActive(true);
        vars.SetActive(true);
-       GetComponent<MeshCollider>().enabled = true;
+
+       GetComponent<MeshCollider>().enabled = true; 
        this.transform.parent = null;
        GetComponent<Rigidbody>().useGravity = true;
     

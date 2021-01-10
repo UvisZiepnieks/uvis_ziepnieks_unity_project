@@ -16,7 +16,7 @@ public class StartGameScreen : MonoBehaviour
       IEnumerator waiter()
     {   
     //Wait for 10 seconds
-    yield return new WaitForSeconds(10);
+    yield return new WaitForSeconds(15);
     screen.SetActive(false);
     cc.enabled = true;
     }
